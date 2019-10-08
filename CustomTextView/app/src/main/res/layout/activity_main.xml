@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:four="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity" >
+
+    <com.example.four.customtextview.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        four:attr_one="attr one in xml"
+        four:textColor = "#ff0000"
+        style="@style/ThroughStyle"
+        android:text="@string/hello_world" />
+
+</RelativeLayout>

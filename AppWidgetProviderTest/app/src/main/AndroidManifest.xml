@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.example.four.appwidgetprovidertest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".RemoteNotificationActivity">
+        </activity>
+
+        <!-- 清单文件中注册MyAppWidgetProvider（本质是广播）-->
+        <receiver android:name=".MyAppWidgetProvider">
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_provider_info">
+            </meta-data>
+
+            <intent-filter>
+                <!-- 第一个 action 用于识别小部件的单击行为 -->
+                <action android:name="com.example.four.appwidgetprovidertest.action.CLICK"/>
+
+                <!-- 第二是 action 是小部件在系统中的唯一标识，这个是系统规范必须写 -->
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+
+        </receiver>
+
+    </application>
+
+</manifest>

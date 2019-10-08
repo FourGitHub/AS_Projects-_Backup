@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<litePal>
+    <dbname value="cool_weather"/>
+    <version value="1"/>
+    <list>
+        <mapping class="com.example.four.fourweather.db.Province"/>
+        <mapping class="com.example.four.fourweather.db.City"/>
+        <mapping class="com.example.four.fourweather.db.County"/>
+    </list>
+</litePal>

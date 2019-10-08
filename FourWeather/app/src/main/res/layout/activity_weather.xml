@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.four.fourweather.WeatherActivity">
+
+    <!--FrameLayout默认情况下会将控件放在左上角，所以ScroolView会覆盖ImageView, ImageView自然成了背景图-->
+    <ImageView
+        android:id="@+id/bing_pic_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--因为天气界面中信息比较多，所以使用ScroolView便于查看-->
+            <ScrollView
+                android:id="@+id/weather_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <!--把整个天气界面分成几个板块，再分别引入-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/title"/>
+
+                    <include layout="@layout/now"/>
+
+                    <include layout="@layout/hourly"/>
+
+                    <include layout="@layout/forecast"/>
+
+                    <include layout="@layout/lifestyle"/>
+                </LinearLayout>
+            </ScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <fragment
+            android:id="@+id/choose_area_fragment"
+            android:name="com.example.four.fourweather.ChooseAreaFragment"
+            android:layout_width="match_parent"
+            android:layout_gravity = "start"
+            android:layout_height="match_parent"/>
+    </android.support.v4.widget.DrawerLayout>
+</FrameLayout>

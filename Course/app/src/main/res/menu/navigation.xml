@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ke_biao"
+        android:icon="@mipmap/icon_ke_biao"
+        android:title="课表"/>
+
+    <item
+        android:id="@+id/you_wen"
+        android:icon="@mipmap/icon_you_wen"
+        android:title="邮问"/>
+
+    <item
+        android:id="@+id/fa_xian"
+        android:icon="@mipmap/icon_fa_xian"
+        android:title="发现"/>
+
+    <item
+        android:id="@+id/wo_de"
+        android:icon="@mipmap/icon_wo_de"
+        android:title="我的"/>
+
+</menu>

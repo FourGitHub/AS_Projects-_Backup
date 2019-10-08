@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="394dp"
+        android:background="@drawable/freshman_h_layout_corners"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/freshman_h_mark"/>
+
+            <TextView
+                android:id="@+id/college_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="通信学院男女比例"
+                android:textColor="#D80083ff"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/spread_pie_chart"
+            android:layout_width="match_parent"
+            android:layout_height="248dp"
+            android:layout_gravity="center|bottom"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+

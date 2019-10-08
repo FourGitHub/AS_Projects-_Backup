@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BroadcastBestPractice</string>
+    <string name="harvest">1、Android的广播机制: 主要分为接收广播和发送广播，接收广播需要注册广播接收器，又分为静态注册和动态注册
+    ，动态注册的广播需要注销，静态注册的广播属于常驻型。我们可以通过Intent发送标准/有序广播。处于广播的安全性问题，Android引入了本地广播机制，使用这个机制发出的广播只能在程序的内部传递，
+        并且广播接收器也只接收来自本应用程序发出的广播。本地广播使用LocalBroadcastMANAGER来对广播进行管理，
+        localBroadcastManager = LocalBroadcastManager.getInstance(this);localBroadcastManager./sendBroadcast(intent)/registerReceover(localReceiver, intentFilter)/unregisterRecerver(localReceiver).
+    </string>
+</resources>

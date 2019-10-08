@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.four.fragmentbestpractice.SummaryActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="1、碎片可以理解为迷你型的活动(碎片生命周期)，可在碎片中引入布局、控件，它可以独立的处理本身的数据，可以复用。创建方式: XXX.xml文件 和 XXXFragment extends Fragment{@Override onCreateView()} 建议使用support v4库中的Fragment。\n
+2、在活动的布局文件中添加碎片: &lt;fragment  一定给个id android:name属性指明要添加的碎片名/&gt; \n
+3、动态加载碎片（优势所在）步骤: 先在布局中创建一个容器（布局）用于存放待添加的碎片。创建待添加碎片实例。通过getSupportFragmentManger获取FragmentManager。fragmentManager.beginTransaction()开启一个事务。transction.replace()传入碎片实例和容器id。最后transction.commit()\n
+4、动态加载布局技巧: 程序能够根据当前运行设备的屏幕大小决定加载哪个布局--使用限定符（l/m/h/xh/xxh/dpi以及res下最小宽度限定符layout-sw600文件夹）\n
+5、碎片&lt;==&gt;活动&lt;==&gt;碎片  通信: 通过在活动中调用getSupportFragmentManager().findFragmentById()在活动中获得当前界面中的显示的碎片的实例就能轻松调用该碎片的方法。通过在碎片中调用getActivity()可获得该碎片相关联的碎片的实例。碎片之间的通信以活动为桥梁\n
+6、此程序能兼容平板和手机，设计之处在于使用最小宽度限定符，在新闻列表碎片中，判断当前活动的View里是否关联了新闻列表内容碎片。如果关联则表示当前设备屏幕宽度大于600sp，点击新闻标题后只需刷新内容碎片中显示的内容。如果没有关联，则启动另一个包含内容碎片的活动。\n
+7、用到了static actionStart()向活动传递数据，以及refresh()更新内容碎片的内容"/>
+
+</FrameLayout>

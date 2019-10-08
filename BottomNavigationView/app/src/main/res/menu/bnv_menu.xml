@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_msg"
+        android:title="消息"
+        android:icon="@mipmap/ic_msg"/>
+
+    <item
+        android:id="@+id/menu_contact"
+        android:title="联系人"
+        android:icon="@mipmap/ic_contact"/>
+
+    <item
+        android:id="@+id/menu_qqzoom"
+        android:title="动态"
+        android:icon="@mipmap/ic_qqzoom"/>
+    <!--<item-->
+        <!--android:id="@+id/menu_qqkandian"-->
+        <!--android:title="动态"-->
+        <!--android:icon="@mipmap/ic_qqkandian"/>-->
+
+</menu>
+

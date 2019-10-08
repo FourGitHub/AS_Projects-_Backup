@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:columnCount="5"
+    android:rowCount="3">
+
+    <TextView
+        android:text="账号："
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:id="@+id/count_text"
+        android:hint="请输入账号"
+        android:layout_columnSpan="4"
+        android:maxLength="10"
+        android:layout_gravity="fill"/>
+
+    <TextView
+        android:text="密码："
+        android:singleLine="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:id="@+id/password_text"
+        android:hint="请输入密码"
+        android:layout_columnSpan="4"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:layout_gravity="fill"/>
+
+    <Button
+        android:text="登录"
+        android:layout_column="2"/>
+
+</GridLayout>

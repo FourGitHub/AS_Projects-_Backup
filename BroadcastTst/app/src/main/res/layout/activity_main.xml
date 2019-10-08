@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.four.broadcasttst.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="改变网络状况可以接收到广播！"
+        android:textColor="#d2691e"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/send_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#d2b48c"
+        android:text="发送自定义 标准 系统全局广播"
+        android:textColor="#000000"
+        android:textSize="18sp"/>
+
+
+    <Button
+        android:id="@+id/send_order_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#d2b48c"
+        android:text="发送自定义 有序 系统全局广播"
+        android:textColor="#000000"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/send_local_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#d2b48c"
+        android:text="发送本地广播"
+        android:textColor="#000000"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="left"
+        android:text="我将这个页面的活动启动模式设置为了 SingTask. 但是每次从其他活动回到此活动（页面）时，仍然会接收到系统网络状况的广播，这是因为这是一个动态注册的广播接收器，在onResume()中注册，在onPause()中取消注册，而每次回到此活动时都要调用onResume()方法。"
+        android:textColor="#d2691e"
+        android:textSize="18sp"/>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 菜单栏消失的动画 -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="300"
+    android:interpolator = "@android:anim/accelerate_interpolator"
+    android:shareInterpolator="true"
+    android:startOffset="20">
+
+
+    <!-- 透明度动画 -->
+    <alpha
+        android:fromAlpha="1.0"
+        android:toAlpha="0" />
+
+    <!-- 缩放动画-->
+    <scale
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:pivotX="100%"
+        android:pivotY="0%"
+        android:toXScale="0.0"
+        android:toYScale="0.0" />
+
+    <!-- 旋转动画 -->
+    <rotate
+        android:fromDegrees="0"
+        android:pivotX="100%"
+        android:pivotY="0%"
+        android:toDegrees="+90" />
+
+</set>
+
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.four.webviewtest.OkHttpActivity">
+
+    <Button
+        android:id="@+id/send_request"
+        android:onClick="sendRequestWithOkHttp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送请求(JSONObject(官方提供) &quot; GSON 解析josn)"/>
+
+    <Button
+        android:id="@+id/post_data"
+        android:onClick="postRequestWithOkHttp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提交数据"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:background="@null"/>
+    </ScrollView>
+
+</LinearLayout>

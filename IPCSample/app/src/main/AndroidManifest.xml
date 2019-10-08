@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.learn.four.ipcsample">
+
+    <permission
+        android:name="com.learn.four.ipcsample.allowConnectBookManagerService"
+        android:protectionLevel="normal" /> <!-- 首先确保 本应用程序拥有这项自定义权限 -->
+    <uses-permission android:name="com.learn.four.ipcsample.allowConnectBookManagerService" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".BinderPoolActivity"/>
+        <!-- 运行在应用程序默认进程 -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 运行在当前应用私有进程，其它应用的组件不能和它跑在同一个进程中 -->
+        <activity
+            android:name=".SecActivity"
+            android:process=":remote" /> <!-- 运行在全局进程，其它应用的组件可以通过 ShareUID ❶ 方式和它跑在同一个进程中 -->
+        <activity
+            android:name=".MessengerActivity"
+            android:process="com.learn.four.ipcsample.remote" /> <!-- 运行在应用程序默认进程 -->
+
+        <activity android:name=".BookClientActivity"
+            android:process="com.learn.four.ipcsample.remoteService"/> <!-- 运行在全局进程，其它应用的组件可以通过 ShareUID 方式和它跑在同一个进程中 -->
+        <!-- 远程Service 说：连接我需要此项权限 -->
+        <service
+            android:name=".aidl.BookManagerService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.learn.four.ipcsample.allowConnectBookManagerService"
+            android:process="com.learn.four.ipcsample.remoteService" /> <!-- 运行在全局进程，其它应用的组件可以通过 ShareUID 方式和它跑在同一个进程中 -->
+        <service
+            android:name=".RemoteService"
+            android:enabled="true"
+            android:exported="true"
+            android:process="com.learn.four.ipcsample.remoteService" /> <!-- 运行在全局进程，其它应用的组件可以通过 ShareUID 方式和它跑在同一个进程中 -->
+        <service
+            android:name=".aidlBinderPool.BinderPoolService"
+            android:enabled="true"
+            android:exported="true"
+            android:process="com.learn.four.ipcsample.remoteService" />
+    </application>
+
+</manifest>

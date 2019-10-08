@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/scroll_vertical"
+        app:showAsAction="never"
+        android:icon="@mipmap/ic_vertical"
+        android:title="垂直滑动"/>
+
+    <item android:id="@+id/scroll_horizontal"
+        app:showAsAction="never"
+        android:icon="@mipmap/ic_horizontal"
+        android:title="水平滑动"/>
+
+</menu>

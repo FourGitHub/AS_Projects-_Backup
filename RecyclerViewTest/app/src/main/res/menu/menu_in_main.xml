@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/horizontal"
+        android:title="横向滚动"/>
+
+    <item
+    android:id="@+id/staggered"
+    android:title="瀑布式布局"/>
+
+    <item
+        android:id="@+id/GridLayout"
+        android:title="网格式布局"/>
+
+    <item
+        android:id="@+id/harvest"
+        android:title="总结"/>
+
+    <item
+        android:id="@+id/quit"
+        android:title="退出"/>
+
+</menu>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--测试不同的 Drawable , 修改LinearLayout / 某个控件 的android:background属性即可 -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/scale_drawable"
+    android:orientation="vertical"
+    tools:context="com.example.four.drawabletest.MainActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/levellist_drawable_bg"
+        android:src="@drawable/levellist_drawable_src"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/transition_drawable"
+        android:gravity="center"
+        android:text="爱就像蓝天白云 晴空万里 突然暴风雨"
+        android:textColor="#b0e0e6"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/inset_drawable"
+        android:gravity="center"
+        android:text="答案"
+        android:textColor="#ffffff"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/img_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:src="@drawable/clip_drawable"/>
+    </FrameLayout>
+
+</LinearLayout>

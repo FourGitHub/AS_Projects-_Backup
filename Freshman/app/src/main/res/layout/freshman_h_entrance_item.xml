@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/freshman_h_layout_corners"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:elevation="1dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <ImageView
+            android:id="@+id/item_img_left"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_marginRight="15dp"/>
+
+        <ImageView
+            android:id="@+id/item_img_right"
+            android:layout_width="0dp"
+            android:scaleType="fitXY"
+            android:layout_height="100dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="match_parent"
+        android:gravity="bottom"
+        android:text = "盖章拿卡报名"
+        android:textSize="16sp"
+        android:textColor="#BF000000"
+        android:paddingBottom="11dp"
+        android:layout_height="46dp"/>
+
+    <com.ms.square.android.expandabletextview.ExpandableTextView
+        android:id="@+id/expand_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        expandableTextView:animDuration="200"
+        expandableTextView:maxCollapsedLines="6"
+        expandableTextView:animAlphaStart="1"
+        expandableTextView:expandDrawable="@drawable/freshman_h_down_more"
+        expandableTextView:collapseDrawable="@drawable/freshman_h_up_less">
+
+        <TextView
+            android:id="@id/expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#B2000000"
+            android:text="Over!"
+            android:textSize="14sp"/>
+
+        <ImageButton
+            android:id="@id/expand_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="4dp"
+            android:paddingTop="17dp"/>
+    </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+
+</LinearLayout>

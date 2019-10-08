@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.four.litepaltest.MainActivity">
+
+    <Button
+        android:id="@+id/button_create_db"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="创建数据库"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/button_add_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="添加数据"/>
+
+    <Button
+        android:id="@+id/button_update_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="更新数据"/>
+
+    <Button
+        android:id="@+id/button_delete_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="删除数据"/>
+
+    <Button
+        android:id="@+id/button_delete_alldata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="删除所有数据"/>
+
+    <Button
+        android:id="@+id/button_query_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="查询数据(按价格降序)"/>
+
+    <Button
+        android:id="@+id/button_aver_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="《第一··》和《设计模··》的平均价格"/>
+</LinearLayout>

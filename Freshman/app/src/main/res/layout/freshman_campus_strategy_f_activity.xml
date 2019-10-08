@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UI.Activity.CampusStrategyActivity">
+    <View
+        android:id="@+id/campus_page_padding_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/freshman_h_title_1"/>
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/freshman_h_title_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_campus_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="6dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/freshman_h_ruxue_backup" />
+
+        <TextView
+            android:id="@+id/campus_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="校园攻略"
+            android:textColor="#fefeff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/base_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_dining_hall"
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onItemClick"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/freshman_campus_f_ic_dininghall" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="15dp"
+                    android:text="学生食堂"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_environment"
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:layout_alignTop="@+id/card_view_spot"
+                android:layout_centerHorizontal="true"
+                android:onClick="onItemClick"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/freshman_campus_f_ic_envoriment" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="15dp"
+                    android:text="校园环境"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_data"
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:layout_alignLeft="@id/card_food"
+                android:layout_alignTop="@+id/card_environment"
+                android:onClick="onItemClick"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/freshman_campus_f_ic_data" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="15dp"
+                    android:text="数据揭秘"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_bank"
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:layout_alignLeft="@id/card_view_spot"
+                android:layout_below="@id/card_view_spot"
+                android:layout_marginTop="30dp"
+                android:onClick="onItemClick"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/freshman_campus_f_ic_bank" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="15dp"
+                    android:text="附近银行"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_bus"
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:layout_alignTop="@+id/card_bank"
+                android:layout_centerHorizontal="true"
+                android:onClick="onItemClick"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/freshman_campus_f_ic_bus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="15dp"
+                    android:text="公交线路"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_dormitory"
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:layout_alignTop="@id/card_dining_hall"
+                android:layout_centerHorizontal="true"
+                android:onClick="onItemClick"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/freshman_campus_f_ic_dormitory" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="15dp"
+                    android:text="学生寝室"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_express"
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:layout_alignLeft="@id/card_data"
+                android:layout_alignTop="@id/card_bank"
+                android:onClick="onItemClick"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/freshman_campus_f_ic_express" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="15dp"
+                    android:text="快递收发"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_spot"
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:layout_alignLeft="@+id/card_dining_hall"
+                android:layout_below="@id/card_dining_hall"
+                android:layout_marginTop="30dp"
+                android:onClick="onItemClick"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/freshman_campus_f_ic_view_spot" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="15dp"
+                    android:text="附近景点"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_food"
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/card_dining_hall"
+                android:layout_marginRight="15dp"
+                android:onClick="onItemClick"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/freshman_campus_f_ic_food" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="15dp"
+                    android:text="周边美食"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

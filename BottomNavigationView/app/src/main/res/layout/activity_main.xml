@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <android.support.v7.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:background="@color/colorPrimary"
+       android:layout_height="?actionBarSize">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity = "center"
+           android:text="BottomNavigationViewDemo"
+           android:textColor="@android:color/white"
+           android:textAllCaps="false"
+           android:textSize="20sp"/>
+   </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.view.ViewPager
+        android:background="@android:color/holo_green_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/bnv"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bnv"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bnv_menu"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemTextColor="@drawable/bnv_tv_color"
+        app:itemTextAppearanceActive="@style/bnv_item_tv_selected"
+        app:itemTextAppearanceInactive="@style/bnv_item_tv_unselected"
+        app:itemIconTint="@drawable/bnv_tv_color"/>
+
+</RelativeLayout>

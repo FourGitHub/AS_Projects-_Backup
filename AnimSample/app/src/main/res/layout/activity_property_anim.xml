@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewAnimActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <ImageView
+            android:id="@+id/img_me"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="15dp"
+            android:src="@mipmap/ic_me" />
+
+        <Button
+            android:id="@+id/btn_be_wider_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:onClick="beWiderAnim"
+            android:text="变宽动画" />
+
+        <Button
+            android:id="@+id/btn_start_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_be_wider_anim"
+            android:layout_alignLeft="@id/btn_be_wider_anim"
+            android:onClick="startAnim"
+            android:text="开始动画" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <ImageView
+            android:id="@+id/img_me_1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="15dp"
+            android:src="@mipmap/ic_me" />
+
+        <Button
+            android:id="@+id/btn_be_wider_anim_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:onClick="beWiderAnim1"
+            android:text="变宽动画" />
+
+        <Button
+            android:id="@+id/btn_start_anim_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_be_wider_anim_1"
+            android:layout_alignRight="@id/btn_be_wider_anim_1"
+            android:onClick="startAnim1"
+            android:text="开始动画" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

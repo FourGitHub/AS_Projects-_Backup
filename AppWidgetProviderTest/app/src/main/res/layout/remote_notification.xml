@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--这个是自定义Notification的布局文件-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--android:text文字资源可以也可以在代码中通过 remoteViews.setTextViewText( , )方法设定-->
+    <TextView
+        android:id="@+id/remote_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="RemoteView在自定义通知上的应用"/>
+
+    <!--android:src图片资源也可以在代码中通过 remoteViews.setInageViewResource( , ) 方法设定-->
+    <ImageView
+        android:id="@+id/remote_img"
+        android:layout_gravity="center"
+        android:src="@mipmap/icon_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

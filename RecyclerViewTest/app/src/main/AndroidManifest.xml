@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.four.recyclerviewtest">
+
+    <uses-permission android:name="com.example.four.permissionbroadcast_Receiver"/>
+
+    <permission
+        android:name="com.example.four.permissionbroadcast_Sender"
+        android:protectionLevel="normal"/>
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".VerticalActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HorizontalActivity"
+            android:label="Horizontal UI">
+        </activity>
+        <activity
+            android:name=".StaggeredActivity"
+            android:label="StaggeredActivity UI">
+        </activity>
+        <activity android:name=".GridLayoutActivity">
+        </activity>
+        <activity android:name=".SummaryActivity">
+        </activity>
+
+        <receiver
+            android:name=".PermissionBroadcastReceiver"
+            android:permission="com.example.four.permissionbroadcast_Sender"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.four.permissionbroadcast_Action"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

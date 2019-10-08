@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:orientation="vertical">
+
+    <include layout="@layout/freshman_h_xszz_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/freshman_h_layout_corners"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp">
+
+
+            <ImageView
+                android:id="@+id/xszz_img"
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:layout_marginBottom="20dp"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/xszz_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:gravity="left|center"
+                android:text="红岩网校工作站"
+                android:textColor="#BF000000"/>
+
+            <include layout="@layout/freshman_h_expand_textview"/>
+
+            <!--<com.mredrock.cyxbs.freshman.Utility.ExpandableTextView-->
+            <!--android:id="@+id/expand_text_view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--expandableTextView:animAlphaStart="1"-->
+            <!--expandableTextView:animDuration="300"-->
+            <!--expandableTextView:collapseDrawable="@drawable/freshman_h_up_less"-->
+            <!--expandableTextView:expandDrawable="@drawable/freshman_h_down_more"-->
+            <!--expandableTextView:maxCollapsedLines="6">-->
+
+            <!--<TextView-->
+            <!--android:id="@id/expandable_text"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/test"-->
+            <!--android:textColor="#88000000"-->
+            <!--android:textSize="14sp"/>-->
+
+            <!--<ImageButton-->
+            <!--android:id="@id/expand_collapse"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center|bottom"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:padding="16dp"/>-->
+            <!--</com.mredrock.cyxbs.freshman.Utility.ExpandableTextView>-->
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

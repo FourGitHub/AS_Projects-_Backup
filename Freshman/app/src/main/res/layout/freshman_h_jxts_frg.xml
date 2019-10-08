@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    app:cardElevation="1dp"
+    app:cardCornerRadius="5dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/junxun_tieshi_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:lineSpacingExtra="5dp"
+            android:gravity="center|top|left"
+            android:text="1.军训期间请假遵循一事一请假的原则，无特殊事由不得请假；\n2.学生在军训场上感到不适，可直接通过“打报告”的形式向教官请假，在训练场边暂时休息；\n3.请假半天以下的由军训排排长经商辅导员同意后批准；\n4.请假半天以上，3天以下的，由学生本人提出书面申请（请假条见附页），经辅导员签字后报校武装部审批，并由学生本人将审批后的申请交军训排排长实施；\n5.请假3天以上的需报请军训师领导同意\n6.请假须外出的，须详细说明原因，并定期向辅导员报告动态；\n7.请假时间累计原则上不得超过军训时间的1/3（即5天）；\n8.如有其他特殊原因请假超过5天的，须专门报请军训师批准。"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+    </ScrollView>
+
+
+</android.support.v7.widget.CardView>

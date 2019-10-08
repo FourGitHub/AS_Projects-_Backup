@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/landing_top"
+        app:layout_heightPercent="40%"
+        app:layout_widthPercent="100%">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:onClick="onBack"
+                    android:src="@mipmap/icon_back"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="登录"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/logo"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        app:layout_heightPercent="40%"
+        app:layout_marginLeftPercent="7%"
+        app:layout_marginRightPercent="7%"
+        app:layout_marginTopPercent="33%"
+        app:layout_widthPercent="86%">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ic_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@mipmap/icon_user"/>
+
+            <EditText
+                android:id="@+id/edit_userid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/ic_user"
+                android:background="@null"
+                android:hint="请输入学号"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/corsor_color"/>
+
+            <View
+                android:id="@+id/view_user"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/edit_userid"
+                android:layout_marginTop="5dp"
+                android:background="#cdcdcd"/>
+
+            <!---->
+            <Button
+                android:id="@+id/land_btn"
+                android:onClick="onLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/landing_btn"
+                android:text="登录"/>
+
+
+            <View
+                android:id="@+id/view_psd"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@+id/land_btn"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:background="#cdcdcd"/>
+
+            <ImageView
+                android:id="@+id/img_user_psd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/view_psd"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/icon_psd"/>
+
+            <EditText
+                android:id="@+id/edit_user_psd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/view_psd"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/img_user_psd"
+                android:background="@null"
+                android:hint="请输入身份证后六位"
+                android:inputType="numberPassword"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/corsor_color"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.percent.PercentFrameLayout>

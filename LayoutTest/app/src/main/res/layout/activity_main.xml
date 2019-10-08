@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.four.layouttest.MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="长按自由复制"
+        android:textSize="24sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textIsSelectable="true"
+        android:textColorHighlight="#cccccc" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入"
+        android:textColorHint="#cccccc"
+        android:maxLines="1"
+        android:imeOptions="actionSearch"
+        android:textColorHighlight="#0aa"
+        android:inputType="textPassword"
+        android:maxLength="10"
+        android:ellipsize="end"
+        android:theme="@style/MyEditText"
+        android:textCursorDrawable="@drawable/custom_edt_cursor"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"/>
+
+</LinearLayout>

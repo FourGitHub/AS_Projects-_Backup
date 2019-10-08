@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="oval">
+
+    <!--<corners/> 仅适用于 android:shape="rectangle" -->
+
+    <!--solid和gradient互斥-->
+    <solid
+        android:color="#adcdef"/>
+
+    <!--设置了size并不会影响最终显示效果，shape还是会被拉伸或缩小为适应View的大小，
+    设置size的唯一作用就是设置 ShapeDrawable 的固有宽/高 -->
+    <size
+        android:width="200dp"
+        android:height="150dp"/>
+
+    <gradient
+        android:angle="45"
+        android:centerColor="#bbcc00"
+        android:centerX="0.5"
+        android:centerY="0.5"
+        android:endColor="#00aabb"
+        android:gradientRadius="200dp"
+        android:startColor="#abcdef"
+        android:type="radial"
+        android:useLevel="false"/>
+
+    <!--padding表示空白，不是shape的空白，威而是包含shape的view的空白-->
+    <padding
+        android:bottom="50dp"
+        android:left="50dp"
+        android:right="50dp"
+        android:top="50dp"/>
+
+    <!--shape的描边-->
+    <stroke
+        android:width="20dp"
+        android:dashWidth="12dp"
+        android:dashGap="8dp"
+        android:color="#bbcc00"/>
+
+</shape>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="59dp"
+    android:paddingBottom="13dp"
+    android:paddingTop="9dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/item_name_btn0"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#54ACFF"
+            android:background="@drawable/freshman_h_layout_corners"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="红岩网校工作站"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/item_name_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/freshman_h_layout_corners"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="团委办公室"
+            android:textColor="#66000000"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/item_name_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/freshman_h_layout_corners"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="团委组织部"
+            android:textColor="#66000000"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/item_name_btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/freshman_h_layout_corners"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="团委宣传部"
+            android:textColor="#66000000"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/item_name_btn4"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/freshman_h_layout_corners"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="校学生会"
+            android:textColor="#66000000"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/item_name_btn5"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/freshman_h_layout_corners"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="大学生艺术团"
+            android:textColor="#66000000"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/item_name_btn6"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/freshman_h_layout_corners"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="重庆邮电大学青年志愿者协会"
+            android:textColor="#66000000"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/item_name_btn7"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/freshman_h_layout_corners"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="社团联合会"
+            android:textColor="#66000000"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/item_name_btn8"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/freshman_h_layout_corners"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="学生科技联合会"
+            android:textColor="#66000000"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</HorizontalScrollView>

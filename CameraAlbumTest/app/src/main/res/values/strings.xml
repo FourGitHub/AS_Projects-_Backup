@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CameraAlbumTest</string>
+    <string name="summary">1、粗心:在onActivityResult()方法里做case子句匹配的时候把resultCode == RESULT_OK 写成了 requestCode == RESULT_OK, 太蠢了\n\n
+2、调用系统相机程序:先在应用关联目录下创建一个文件，new File(getExternalCacheDir(), &quot;output_image.jpg&quot;);用于当前程序和相机程序共享此照片存放路径。Android7.0后直接使用本地真实路径的Uri被认为是不安全的，如果一项包含了文件Uri(file:///···)的intent离开了你的应用，会抛出FileUriExposedException.解决方案:用FileProvider(注册 &lt;meta-data/&gt;、资源引用file_paths.xml)将file:///···转换成content://···
+,所以还需要通过 Build.VERSION.SDK_INT 来判断是否需要这个转换:imageUri = Uri.fromFile(outputImage)/FileProvider.getUriForFile(,,outputImage);最后这个imageUri用于给启动相机程序的隐式的Intent指定照片输出地址: new Intent(&quot;android.media.action.IMAGE_CAPTURE&quot;); intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri); 然后startActivityForResult()，当照相完成后会调用 onActivityResult(),如果resultCode == RESULT_OK则将照片解析成Bitmap对象。\n\n
+3、那么为什么要使用应用关联目录来存放照片呢，因为从Android6.0开始，读写SD卡被列为了危险权限，如果将拍的照片放在SD卡任意其他目录都需要运行时权限处理，而使用应用关联目录可以跳过这一步。又注意，在Android4.4之前，访问SD卡应用关联目录也是要什么权限的，所以为了兼容老版本，还要在Android.xml中声明访问SD卡权限。\n\n
+4、调用系统相册: 检测授权 -&gt; 打开相册: new Intent(&quot;android.intent.action.GET_CONTENT&quot;);intent.setType(&quot;image/*&quot;);startActivityForResult() =&gt; onActivityResult(data) -&gt; handleImageOnKitKat(data){Android 4.4及以上，data中的uri是一个封装过的uri，Uri uri = data.getData();再对它进行解析}/handleImageBeforeKitKat(data){Android4.4 以下，直接利用data中的uri取出所选图片的真实路径}，通过ContenProvider访问相机程序的内容提供器，
+从cursor中取出所选相册中图片的路径，再将这个路径Bitmap bitmap = BitmapFactory.decodeFile(imagePath);picture.setImageBitmap(bitmap);</string>
+</resources>

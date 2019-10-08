@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--指定共享的具体目录，主要体现在这个标签
+      path属性确定可访问的目录，name属性来映射真实的文件路径.-->
+    <external-path
+        name="my_images"
+        path=""/>
+</paths>
+
+
+
+
+

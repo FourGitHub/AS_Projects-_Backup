@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff5ee"
+    android:orientation="vertical"
+    tools:context="com.example.four.broadcastbestpractice.MainActivity">
+
+    <Button
+        android:id="@+id/send_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6495ed"
+        android:text="发送强制下线广播"
+        android:textColor="#000000"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/permission_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6495ed"
+        android:text="发送权限广播"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20sp"/>
+
+
+</LinearLayout>

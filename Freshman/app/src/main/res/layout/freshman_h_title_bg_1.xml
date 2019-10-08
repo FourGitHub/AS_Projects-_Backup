@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/freshman_h_title_1"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize">
+
+    <ImageView
+        android:id="@+id/ruxue_title_backup_img_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/freshman_h_ruxue_backup"/>
+
+    <TextView
+        android:id="@+id/ruxue_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="入学必备"
+        android:textColor="#fefeff"
+        android:textSize="18sp"/>
+
+    <ImageButton
+        android:id="@+id/ruxue_title_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ruxue_title_tv"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="12dp"
+        android:padding="7dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/freshman_h_ruxue_info"/>
+
+    <TextView
+        android:id="@+id/ruxue_title_right_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="15dp"
+        android:textSize="16sp"
+        android:text="编辑"
+        android:textColor="#ffffff"/>
+
+</RelativeLayout>

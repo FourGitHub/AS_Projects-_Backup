@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#fff5ee"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/news_visible_content_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/news_title_in_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:textColor="#000000"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#ffa500"/>
+        <TextView
+            android:id="@+id/news_content_text"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="#d2691e"
+            android:textSize="18sp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="2dp"
+        android:background="#ffa500"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"/>
+
+    <View
+        android:layout_width="2dp"
+        android:background="#ffa500"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

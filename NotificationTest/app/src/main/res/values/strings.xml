@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NotificationTest</string>
+    <string name="motto">我不去想, \n    是否能够成功, \n    既然选择了远方, \n    便只顾风雨兼程。\n我不去想, \n    能否赢得爱情, \n    既然钟情于玫瑰, \n    就勇敢地吐露真诚 。\n我不去想, \n    身后会不会袭来寒风冷雨, \n    既然目标是地平线, \n    留给世界的只能是背影 。\n我不去想, \n    未来是平坦还是泥泞, \n    只要热爱生命, \n    一切，都在意料之中。</string>
+    <string name="str_summary">通过这个程序，主要学习通知的常用基础基础. NotificationManager(一个系统服务类, getSystemService(NOTIFICATION_SERVICE) )管理通知. NotificationCompat.Builder(Context).连缀设置丰富Notification对象. setContentTitle() setContentText() setContentIntent(PendingIntent对象) setWhen() setSmallIcon() setLargeIcon() setStyle() setAutoCancle(true) setSound(Uri.fromFile(new File(path))) setVibrate(new long[]{*振动权限声明*}) setLights(Color.WRITE) setDefaults(NotificationCompat.DEFAULT_ALL) setPriority(NotificationCompat.MAX 5个常量可选) setStyle( new NotificationCompat.BigPictureStyle().bigPicture(BitmapFactory.decodeResource(getResources(),R.drawable.name))) ) setStyle(new NotificationCompat.BigTextStyle().bigText( yourBigText )) manager.notify(id,notification) manager.cancel(1)</string>
+</resources>

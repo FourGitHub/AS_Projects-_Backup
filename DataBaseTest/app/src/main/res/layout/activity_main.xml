@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.four.databasetest.MainActivity">
+
+    <Button
+        android:id="@+id/button_create_db"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="创建数据库"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/button_add_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="添加数据"/>
+
+    <Button
+        android:id="@+id/button_update_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="更新数据"/>
+
+    <Button
+        android:id="@+id/button_delete_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="删除数据"/>
+
+    <Button
+        android:id="@+id/button_query_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="查询数据"/>
+
+    <Button
+        android:id="@+id/button_delete_all_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="清空数据库"/>
+
+    <Button
+        android:id="@+id/id_sqlite_thread_safe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sqlite到底是线程安全的吗"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:text="这个程序使用的数据持久化技术中的SQLiteDatabase数据库储存，自定义XXXDatabaseHelper extends SQLiteDatabaseHelper.
+        @Override onCreate(){数据库创建} ,@Override onUpdata(){数据库升级}.db.getWriteable/ReadableDatabase(),ContentValues类，Cousor类.
+        数据库CRUD操作,insert(),updata(),delete()[execSQL()],query()[rawQuery()] ,
+        还创建了自定义的DatabaseProvider extends ContentProvider{@Overide [ onCreate() + CRUD + getType(){vnd.android.cursor.dir/vnd.com.example.four.databasetest.provider.book} ]},
+         static语句块{UriMatcher对象声明;注册待匹配数据的uri(authority,path,code);}  给程序中的数据提供外部访问接口，实现跨程序数据共享.
+        当我们在已经创建数据库时（第一次点击按钮后），如果数据库的版本号没有变，则不会再调用OnCreate().不要重复添加数据"/>
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.four.listviewtest.SummaryActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="1、提高ListView的运行效率:首先分析 @Override getView()  方法。当ListView的每一个子项被加载到屏幕上时，会调用此方法返回一个子项布局的View，
+        为了让已经加载过的布局不被重复加载，以及不在重复通过View来获得其中控件的引用，这样就能提高ListView的运行效率,在此之前还需要一个内部类ViewHolder，用来对布局中控件的实例进行缓存。这就要用到该方法的参数列表中的convertView参数 这个参数将之前加载好的布局进行缓存，以便程序重复使用，只需要检测它是否非空（!= null）,如果是null的话，就
+表明这个子项布局没有被加载过，需要加载（view = LayoutInflater.from(getContext()).inflate(itemLayoutId,parent, false);再获得其中控件的引用存到viewHolder的成员变量中;） 然后为这个调用view.setTag(viewHolder)以及给控件指定资源。这样当该布局二次进入到屏幕的时候，就能检测到 convertView != null , 然后再取出这个viewHolder, 只需要给控件指定资源就行了。\n\n
+2、进一步参数分析: getView()参数列表中一个3个参数  position, convertView,  parent\n
+position: 子项布局在adapter的数据集（构造adapter时传入的待适配资源的List）中的位置,用于获得子项中控件的资源setXXX（X.getXXX())\n
+parent: 表示子项布局最终依附的父布局ListView.class\n\n
+3、为子项布局注册点击事件: 在加载出view后，直接为其注册侧点击事件就好了，和RecyclerView不同的是，ListView只能为整个子项布局注册点击事件，而RecyclerView还可以为其子项布局中的控件注册点击事件。"/>
+
+</FrameLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="占一个位置"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#aafafc"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:longClickable="false"
+            android:text="测试文字测试文字测试文字测试文字测试文字测试文字"/>
+    </LinearLayout>
+
+
+    <!--RotateTextView的父容器是这个LinearLayout，它的宽、高已经由RotateTextView确定
+    RotateTextView 的旋转并不能改变父容器的宽高，仅仅针对RotateTextView。-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFB6C1"
+        android:orientation="horizontal">
+
+        <com.example.four.customviewtest.MyCustomView.RotateTextView
+            android:id="@+id/rotate_1"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:text="测试文字测试文字测试文字测试文字测试文字测试文字"/>
+    </LinearLayout>
+
+
+    <!--RotateTextView的父容器是这个LinearLayout，它的宽、高已经由RotateTextView确定
+        RotateTextView 的旋转并不能改变父容器的宽高，仅仅针对RotateTextView -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFB661"
+        android:orientation="horizontal">
+
+        <!--效果为逆时针旋转90度后向下平移 (RotateTextView)getWidth()
+            和上面那个RotateTextView的唯一差别在于这个RotateTextView的宽度为march_parent,
+            所以由他平移的(RotateTextView)getWidth() 产生效果和上面那个不一样！
+            这个RotateTextView下面平移的高度大小是‘屏幕的宽度’，上面那个RotateTextView
+            平移的高度大小是‘text长度的宽度’！-->
+        <com.example.four.customviewtest.MyCustomView.RotateTextView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="50dp"
+            android:text="测试文字测试文字测试文字测试文字测试文字测试文字"/>
+    </LinearLayout>
+
+
+<!--对比-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:text="测试文字"/>
+
+    <com.example.four.customviewtest.MyCustomView.RotateTextView
+        android:id="@+id/rotate_2"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginLeft="150dp"
+        android:text="测试文字"
+        />
+
+</LinearLayout>

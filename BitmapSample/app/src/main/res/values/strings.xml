@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BitmapSample</string>
+
+    <string-array name="drawable_dirs">
+        <item>drawable - hdpi</item>
+        <item>drawable - xhdpi</item>
+        <item>drawable - xxhdpi</item>
+        <item>drawable - xxxhdpi</item>
+        <item>drawable - xxxxhdpi</item>
+    </string-array>
+
+    <string-array name="imgView_size">
+        <item>屏幕宽度</item>
+        <item>100dp × 100dp</item>
+    </string-array>
+
+    <string-array name="compress_method">
+        <item>质量压缩</item>
+        <item>Matrix压缩</item>
+    </string-array>
+</resources>

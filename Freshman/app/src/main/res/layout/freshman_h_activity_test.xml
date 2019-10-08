@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="315dp"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:gravity="center">
+
+    <com.mredrock.cyxbs.freshman.CustomView.CircleViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="315dp"
+        android:layout_height="160dp"
+        android:clipChildren="false"/>
+
+    <LinearLayout
+        android:id="@+id/dots_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_gravity="bottom|center">
+    </LinearLayout>
+
+</FrameLayout>

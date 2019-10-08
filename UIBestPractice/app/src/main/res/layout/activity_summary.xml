@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.four.uibestpractice.SummaryActivity">
+
+
+    <TextView
+        android:id="@+id/summary_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="1、Nine-Patch图片制作: 将图片导入到drawable系列的文件夹，然后在AS中将它选中再鼠标右键，找到 create 9-Patch file. 上左表示图片拉伸区域，右上表示填充区域.
+需要在各个drawable文件夹下导入图片以适应不同屏幕大小手机.
+\n\n2、关于RecyclerView的基本用法: 子项布局(.xml)   ++
+适配器( MyxxxAdapter extends RecyclerView.Adapter &lt; MsgAdapter.ViewHolder&gt;
+{  static class ViewHolder extends RecyclerView.ViewHolder{保存子项中的控件的引用}  ++
+@Override onCreateViewHolder(){ 子项布局实例化和注册点击事件，用该实例构造ViewHolder实例并return}
+@Override onBindViewHolder(){  通过position获得子项实例，在调用实例的getXXX()对子项的数据赋值  }
+@Override getItemCount(){返回数据源长度}  }   ++   待适配的资源类   +   指定RecyclerView的布局方式.(LinerLayoutManager)
+\n\n3、此程序根据消息的类型来判断布局中控件的可见性，消息框的视觉效果是通过将TextView放在LinearLayout中，
+再为LinearLayout指定一张背景图 android:background=&quot;@drawable/left_pic.jpg&quot;
+\n\n4、关于xml文件中使用 &lt;     &gt;     &quot;      &amp;     在xml文件中 &lt; 使用&amp;lt   &gt;使用&amp;gt   &amp;使用&amp;amp     &quot;使用&amp;quot     换行使用\\n
+\n\n5、Button点击事件: 当用户点击发送按钮，就getText() EditView控件中的内容用于new Msg，非空的话就添加到msgList, adapter.notifyItemInserted(msgList.size()-1);recyclerView.scrollToPosition(msgList.size()-1);"/>
+
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/header"/>
+
+    <include layout="@layout/course_top"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/kebiao_swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include
+                    android:id="@+id/course_left"
+                    layout="@layout/course_left"/>
+
+                <LinearLayout
+                    android:id="@+id/course_seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <include
+                        android:id="@+id/monday"
+                        layout="@layout/course_one_day"/>
+
+                    <include
+                        android:id="@+id/tuesday"
+                        layout="@layout/course_one_day"/>
+
+                    <include
+                        android:id="@+id/wednesday"
+                        layout="@layout/course_one_day"/>
+
+                    <include
+                        android:id="@+id/thursday"
+                        layout="@layout/course_one_day"/>
+
+                    <include
+                        android:id="@+id/friday"
+                        layout="@layout/course_one_day"/>
+
+                    <include
+                        android:id="@+id/saturday"
+                        layout="@layout/course_one_day"
+                        android:visibility="gone"/>
+
+                    <include
+                        android:id="@+id/sunday"
+                        layout="@layout/course_one_day"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@android:color/white"
+        app:itemTextColor="#7981fc"
+        app:menu="@menu/navigation"/>
+
+</LinearLayout>

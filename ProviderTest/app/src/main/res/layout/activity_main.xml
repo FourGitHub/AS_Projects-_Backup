@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.four.providertest.MainActivity">
+
+    <Button
+        android:id="@+id/button_query_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询Book表中所有数据"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/button_add_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:text="往Book表中添加数据"/>
+
+    <Button
+        android:id="@+id/button_update_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:text="更新Book表中某一数据"/>
+
+
+    <Button
+        android:id="@+id/button_delete_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:text="删除Book表中的指定数据"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:text="DatabaseTest程序为外部程序提供了数据外部访问接口，所以这个程序才能通过ContentResolve对象访问DatabaseTest的Book表中的数据.
+       具体的方法是给ContentResolver的CRUD方法提供一个uri和一些对数据约束限定条件来访问数据. *getContentResolver().CRUD*  在insert() 和 update() 方法参数中需要用到ContentValues对象
+         *CRUD操作必须要求DatabaseTest程序处于运行状态"
+           />
+
+</LinearLayout>

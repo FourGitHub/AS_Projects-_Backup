@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ruxue_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/padding_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/freshman_h_title_1"/>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/freshman_h_title_1"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/ruxue_title_backup_img_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="6dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/freshman_h_ruxue_backup"/>
+
+        <TextView
+            android:id="@+id/ruxue_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="入学必备"
+            android:textColor="#fefeff"
+            android:textSize="18sp"/>
+
+        <ImageButton
+            android:id="@+id/ruxue_title_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ruxue_title_tv"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="12dp"
+            android:padding="7dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/freshman_h_ruxue_info"/>
+
+        <TextView
+            android:id="@+id/ruxue_title_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:textSize="16sp"
+            android:text="编辑"
+            android:textColor="#ffffff"/>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/ruxue_recycler_out_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ruxue_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/ruxue_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="25dp"
+
+            android:src="@drawable/freshman_h_fab"
+            fab:fab_shadow="true"
+            fab:fab_type="normal" />
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>
+

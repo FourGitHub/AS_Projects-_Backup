@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MvpLoginDemo</string>
+    <string name="summary">【简介】\n
+MVP框架由 MVC 框架演变而来，它们的思想有想通的地方：Controller / Presenter 层负责逻辑处理，Model层负责提供数据，View 层负责显示。但是 MVP 与 MVC 框架有一个重大的区别：在 MVP框架中，View层 并不直接访问 Model层 (View 与 Model解耦) ，所有的交互都发生在 Presenter层，这一区别正是 Presenter 层所做的 --- 把程序主要的逻辑分离到Presenter层；而在 MVC 框架中，View直接从Model中获取数据，造成了View 和 Model的耦合。\n\n
+
+【MVP理论知识】\n
+▶ Activity 和 Fragmet 视为 View层，负责处理 UI\n\n
+
+▶ Presenter 为业务处理层，既能调用 UI逻辑，又能调用Model 请求数据，该层为纯Java类，不涉及任何 Android API(其实不太准确).\n\n
+
+▶ Model 层负责具体的数据请求，是程序的数据源。\n\n
+
+三层之间的调用顺序为 View -> Presenter -> Model, 为了调用安全着想不可反向调用，不可越级调用！</string>
+</resources>

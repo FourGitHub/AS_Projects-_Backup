@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.four.storagetest.MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7cc8fc"
+        android:gravity="left|center"
+        android:onClick="button_1"
+        android:text=" Environment.getExternalStorageDirectory()"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/text_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#f00"
+        android:textIsSelectable="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="button_2"
+        android:background="#7cc8fc"
+        android:text="Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/text_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#f00"
+        android:textIsSelectable="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="button_3"
+        android:background="#7cc8fc"
+        android:text="context.getExternalFilesDir(Environment.DIRECTORY_DCIM)"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/text_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#f00"
+        android:textIsSelectable="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
+        android:onClick="button_4"
+        android:background="#7cc8fc"
+        android:text=" APP在外部存储空间的私有files目录:\n context.getExternalFilesDir(null));"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/text_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#f00"
+        android:textIsSelectable="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
+        android:background="#7cc8fc"
+        android:onClick="button_7"
+        android:text=" APP在外部存储空间的私有cache目录:\n context.getExternalCacheDir();"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/text_7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#f00"
+        android:textIsSelectable="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
+        android:background="#7cc8fc"
+        android:onClick="button_5"
+        android:text=" APP在内部存储空间的files目录:\n context.getFilesDir()"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/text_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#f00"
+        android:textIsSelectable="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
+        android:background="#7cc8fc"
+        android:onClick="button_6"
+        android:text=" APP在内部存储空间的cache目录:\n context.getCacheDir()"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/text_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#f00"
+        android:textIsSelectable="true" />
+
+
+    <!--<Button-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:onClick="button_8"-->
+    <!--android:text="Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)"-->
+    <!--android:textAllCaps="false"/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/text_8"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+    <!--<Button-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:onClick="button_9"-->
+    <!--android:text="Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)"-->
+    <!--android:textAllCaps="false"/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/text_9"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+
+</LinearLayout>

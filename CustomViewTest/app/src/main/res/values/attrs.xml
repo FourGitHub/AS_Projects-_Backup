@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--name为声明的"属性集合"名，可以随便取，但是最好是设置为跟我们的View一样的名称-->
+    <declare-styleable name="MyCircle">
+
+        <!--在"属性集合"中声明我们的自定义属性：名称为default_size,取值类型为尺寸类型（dp,px等）-->
+        <attr name="default_value" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomCircleHead">
+        <attr name="cch_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="FourCustomAttrs">
+        <attr name="default_size" format="dimension" />
+        <attr name="radius_dimention" format="dimension" />
+    </declare-styleable>
+
+</resources>
+
+
+

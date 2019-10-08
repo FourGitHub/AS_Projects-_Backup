@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#69a0fa</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="home_bottom_normal">#777777</color>
+    <color name="home_bottom_checked">#779AFA</color>
+    <color name="swipe_refresh_color">#7981fc</color>
+
+</resources>

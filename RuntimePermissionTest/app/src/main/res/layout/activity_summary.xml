@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.four.runtimepermissiontest.SummaryActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="1、Android6.0后加入了运行时权限功能，Android将权限分为两种，普通权限和危险权限，危险权限需要运行时向用户申请授权，
+危险权限一共9组24项，表格中每个危险权限都属于一个权限组，一旦用户对权限组中任意一个权限授权，则该组所有其他权限也会同时被授权\n\n
+2、此程序使用的是CALL_PHONE危险权限，构建了一个隐式Intent，action指定为Intent.ACTION_CALL，Intent intent = new Intent(Intent.ACTION_CALL)\n\n
+3、程序中添加按钮触发打电话操作，按钮点击后会先判断用户是否已经对用户授权了\nif(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},1);}else{ makeCall(); }\n\n
+4、会回调onRequestPermissionResult(){if(grantResults.length>0 &amp;&amp; grantResults[0] == PackageManager.PERMISSION_GRANTED)},
+"/>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="top"
+        android:maxLines="2"
+        android:hint="你可以在这里输入一些信息！"/>
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="#D2691E"
+        android:text="发送"
+        android:textAllCaps="false"
+        android:textColor="#FFEBCD"
+        />
+
+
+
+
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/button_3"-->
+    <!--android:text="Button1"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:background="#D2691E"-->
+    <!--android:layout_gravity="bottom"-->
+    <!--android:textColor="#FFEBCD"/>-->
+
+</LinearLayout>

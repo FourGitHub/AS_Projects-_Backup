@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LayoutAnimActivity">
+
+    <LinearLayout
+        android:id="@+id/lin_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:layoutAnimation="@anim/layout_anim"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="Hello World!"
+            android:textAllCaps="false"
+            android:textColor="#c2ed00"
+            android:textSize="36sp"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:id="@+id/tv_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Hello World!"
+            android:textAllCaps="false"
+            android:textColor="#ff8ab2"
+            android:textSize="36sp"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Hello World!"
+            android:textAllCaps="false"
+            android:textColor="#f59e02"
+            android:textSize="36sp"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Hello World!"
+            android:textAllCaps="false"
+            android:textColor="#c37fa9"
+            android:textSize="36sp"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Hello World!"
+            android:textAllCaps="false"
+            android:textColor="#c2ed00"
+            android:textSize="36sp"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Hello World!"
+            android:textAllCaps="false"
+            android:textColor="#ae000e"
+            android:textSize="36sp"
+            android:textStyle="italic|bold" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:onClick="addChild"
+            android:text="添加子View"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visiable"
+            android:textAllCaps="false"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="20sp"
+            android:onClick="visiableTv00"/>
+
+        <Button
+            android:id="@+id/btn_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:onClick="removeChild"
+            android:text="删除子View"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

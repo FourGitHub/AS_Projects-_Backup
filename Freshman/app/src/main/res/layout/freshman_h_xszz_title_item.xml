@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="?android:attr/borderlessButtonStyle"
+    android:id="@+id/item_name_btn"
+    android:layout_width="wrap_content"
+    android:layout_height="34dp"
+    android:background="@drawable/freshman_h_layout_corners"
+    android:elevation="1dp"
+    android:gravity="center"
+    android:minHeight="0dp"
+    android:text="红岩网校工作站"
+    android:textSize="15sp"
+    android:textColor="#66000000"/>
